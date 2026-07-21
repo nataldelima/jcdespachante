@@ -1,11 +1,12 @@
 :root {
     --maxw: 1180px;
     --bg: #0A0A0A;
+    --bg-panel: #121212;
     --white: #F6F6F4;
     --line: #232323;
     --lime: #C6FF3D;
     --gray: #9A9A96;
-
+    --gray-dim: #6E6E6A;
 }
 
 
@@ -147,7 +148,7 @@ nav.main-nav a:hover {
 }
 
 .btn-primary {
-    background: var(--line);
+    background: var(--lime);
     color: var(--bg);
 }
 
@@ -198,4 +199,104 @@ nav.main-nav a:hover {
     font-size: 1.4rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+}
+
+/*========HERO==========*/
+.hero {
+    position: relative;
+    padding: 180px 0 120px;
+    background: radial-gradient(ellipse 900px 500px at 85% 10%, rgba(198, 255, 61, 0.07), transparent 60%), var(--bg);
+    overflow: hidden;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    color: var(--gray);
+    margin-bottom: 26px;
+}
+
+.hero-tag .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--lime);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(198, 255, 61, 0.6);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(198, 255, 61, 0.55);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(198, 255, 61, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(198, 255, 61, 0);
+    }
+}
+
+.hero h1 {
+    font-size: clamp(2.3rem, 4.4vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.08;
+    margin-bottom: 22px;
+}
+
+.hero h1 .accent {
+    color: var(--lime);
+}
+
+.hero p.lead {
+    font-size: 1.08rem;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 38px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 46px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 34px;
+    flex-wrap: wrap;
+}
+
+.hero-stats div {
+    border-left: 2px solid var(--line);
+    padding-left: 14px;
+}
+
+.hero-stats strong {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: var(--lime);
+}
+
+.hero-stats span {
+    font-size: 0.78rem;
+    color: var(--gray-dim);
 }
