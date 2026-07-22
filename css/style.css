@@ -586,3 +586,118 @@ nav.main-nav a:hover {
 .step:last-child .step-line {
     display: none;
 }
+
+/* Seção de diferenciais */
+
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.diff-card {
+    padding: 30px;
+    border-radius: var(--radius);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    transition: border-color .3s ease;
+}
+
+.diff-card:hover {
+    border-color: rgba(198, 255, 61, 0.35);
+}
+
+.diff-card .di {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--lime);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.diff-card .di svg {
+    width: 20px;
+    height: 20px;
+    color: var(--lime);
+}
+
+.diff-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.diff-card p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.55;
+}
+
+/* Seção de Depoimentos */
+
+.testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.testi-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+    color: var(--lime);
+}
+
+.stars svg {
+    width: 16px;
+    height: 16px;
+}
+
+.testi-card p {
+    font-size: 0.94rem;
+    color: var(--white);
+    line-height: 1.65;
+}
+
+.testi-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.testi-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-panel-2);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--lime);
+    font-size: 0.85rem;
+}
+
+.testi-author span {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
