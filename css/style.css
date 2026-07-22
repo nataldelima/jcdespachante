@@ -1,7 +1,9 @@
 :root {
     --maxw: 1180px;
+    --radius: 14px;
     --bg: #0A0A0A;
     --bg-panel: #121212;
+    --bg-panel-2: #161616;
     --white: #F6F6F4;
     --line: #232323;
     --lime: #C6FF3D;
@@ -49,6 +51,17 @@ button {
     max-width: var(--maxw);
     margin: 0 auto;
     padding: 0 24px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /*========HEADER==========*/
@@ -370,6 +383,49 @@ nav.main-nav a:hover {
 
     50% {
         transform: translateY(-10px);
-
     }
+}
+
+/* Seção de benefícios */
+.benefits {
+    padding: 0 0 90px;
+    position: relative;
+    z-index: 2;
+}
+
+.benefits .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.benefit-item {
+    background: var(--bg-panel);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background .25s ease;
+}
+
+.benefit-item-hover {
+    background: var(--bg-panel-2);
+}
+
+.benefit-item svg {
+    width: 26px;
+    height: 26px;
+    color: var(--lime);
+}
+
+.benefit-item p {
+    font-size: 0.88rem;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.4;
+}
 }
