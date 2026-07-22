@@ -40,6 +40,15 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 button {
     font-family: inherit;
     cursor: pointer;
@@ -524,5 +533,56 @@ nav.main-nav a:hover {
     font-size: 0.86rem;
     color: var(--gray);
     line-height: 1.55;
+}
 
+
+/* Seção Como funciona */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+}
+
+.step {
+    position: relative;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.step-num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--lime);
+    line-height: 1;
+    margin-bottom: 22px;
+    opacity: 0.85;
+}
+
+.step h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 0.86rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+.step-line {
+    position: absolute;
+    top: 22px;
+    left: calc(100% - 10px);
+    width: calc(100% - 20px);
+    height: 1px;
+    background: linear-gradient(90deg, var(--lime), transparent);
+    display: block;
+}
+
+.step:last-child .step-line {
+    display: none;
 }
