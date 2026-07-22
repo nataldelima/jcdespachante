@@ -53,6 +53,25 @@ button {
     padding: 0 24px;
 }
 
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lime);
+}
+
+.eyebrow::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: var(--lime);
+    display: inline-block;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -428,4 +447,82 @@ nav.main-nav a:hover {
     font-weight: 500;
     line-height: 1.4;
 }
+
+/* seção de serviços */
+.section {
+    padding: 110px 0;
+}
+
+.section-head {
+    max-width: 640px;
+    margin-bottom: 64px;
+}
+
+.section-head h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.section-head p {
+    color: var(--gray);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.section-head.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 32px 26px;
+    transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(198, 255, 61, 0.4);
+    background: var(--bg-panel-2);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(198, 255, 61, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-icon svg {
+    width: 24px;
+    height: 24px;
+    color: var(--lime);
+}
+
+.service-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    font-size: 0.86rem;
+    color: var(--gray);
+    line-height: 1.55;
+
 }
